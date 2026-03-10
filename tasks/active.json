@@ -1,0 +1,41 @@
+{
+  "project": "DOO Psychotechnische Tests Training App",
+  "epics": [
+    {
+      "id": "epic-1",
+      "title": "Project Setup & Infrastructure",
+      "status": "completed",
+      "tasks": []
+    },
+    {
+      "id": "epic-2",
+      "title": "Core Architecture & State Management",
+      "status": "completed",
+      "tasks": []
+    },
+    {
+      "id": "epic-3",
+      "title": "Data & Generator Implementation",
+      "status": "completed",
+      "tasks": []
+    },
+    {
+      "id": "epic-4",
+      "title": "UI Components & Layout",
+      "status": "completed",
+      "tasks": []
+    },
+    {
+      "id": "epic-5",
+      "title": "Test Interfaces (The 5 Tests)",
+      "status": "completed",
+      "tasks": []
+    },
+    {
+      "id": "epic-6",
+      "title": "Integration & Polish",
+      "status": "completed",
+      "tasks": []
+    }
+  ]
+}

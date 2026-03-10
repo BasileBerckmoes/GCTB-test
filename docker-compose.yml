@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  doo-training:
+    build: .
+    network_mode: "host"
+    container_name: doo-training
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    labels:
+      # Traefik labels — user will customize these
+      - "traefik.enable=true"
+      - "traefik.http.routers.doo-training.rule=Host(`doo.example.com`)"
+      - "traefik.http.routers.doo-training.entrypoints=websecure"
+      - "traefik.http.routers.doo-training.tls.certresolver=letsencrypt"
+      - "traefik.http.services.doo-training.loadbalancer.server.port=80"
+
+  node:
+    image: node:20-alpine
+    container_name: doo-training-dev
+    network_mode: "host"
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "5173:5173"
+    command: npm run dev
