@@ -41,8 +41,7 @@ export const TestRunner: React.FC<TestRunnerProps> = ({ mode, practiceTestId, on
 
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
-  const questionsPerTest = mode === 'shortFull' ? 5 : 25;
+  const questionsPerTest = mode === 'practice' ? 3 : mode === 'shortFull' ? 5 : 25;
 
   // Pre-generate questions for current test
   const [questions, setQuestions] = useState<any[]>([]);

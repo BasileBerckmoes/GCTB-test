@@ -19,8 +19,8 @@ describe('Full Test Flow Integration', () => {
   });
 
   it('starts test, answers questions, shows results', async () => {
-    // Generate just 25 dummy questions for getal test to simulate a practice run
-    const dummyQuestions = Array.from({ length: 25 }, (_, i) => ({
+    // Generate just 3 dummy questions for getal test to simulate a practice run
+    const dummyQuestions = Array.from({ length: 3 }, (_, i) => ({
       id: `getal-${i}`,
       topExpression: { left: 1, operator: '+', right: 1, result: 2 },
       bottomExpression: { left: 1, operator: '+', right: 2, result: 3 },
@@ -37,7 +37,7 @@ describe('Full Test Flow Integration', () => {
     await user.click(practiceBtn);
 
     // We should be on Screen 1
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 3; i++) {
        // Screen 1 -> Screen 2
        await user.click(await screen.findByText(/Volgende/i));
        // Screen 2 -> Screen 3
