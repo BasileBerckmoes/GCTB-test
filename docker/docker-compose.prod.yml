@@ -9,7 +9,7 @@ services:
     labels:
       # Traefik labels — customize the Host rule with your real domain!
       - "traefik.enable=true"
-      - "traefik.http.routers.doo-training.rule=Host(`mil.artugar.be`)"
+      - "traefik.http.routers.doo-training.rule=Host(`mil.artugar.com`)"
       - "traefik.http.routers.doo-training.entrypoints=https"
       - "traefik.http.routers.doo-training.tls=true"
       - "traefik.http.routers.doo-training.tls.certresolver=letsencrypt"
