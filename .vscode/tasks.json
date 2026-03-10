@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Switch to DEV Compose",
+      "type": "shell",
+      "command": "ln -sf docker/docker-compose.dev.yml docker-compose.yml",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Switch to PROD Compose",
+      "type": "shell",
+      "command": "ln -sf docker/docker-compose.prod.yml docker-compose.yml",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    }
+  ]
+}
